@@ -1,0 +1,9 @@
+node_modules
+vendor
+*.log
+.idea
+.terraform
+*.tfstate
+*.tfstate.backup
+*.rkestate
+kube_config_cluster.yml

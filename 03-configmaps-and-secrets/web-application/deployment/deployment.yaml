@@ -1,0 +1,34 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: web-application
+  labels:
+    app: web-application
+    workshop: workshop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-application
+  template:
+    metadata:
+      labels:
+        app: web-application
+        workshop: workshop
+    spec:
+      containers:
+        - name: web-application
+          image: bashofmann/k8s-workshop-web-application:3.0.0
+          envFrom:
+            - configMapRef:
+                name: web-application-config
+          volumeMounts:
+            - mountPath: /etc/web-application
+              name: web-application-secret
+          ports:
+            - containerPort: 80
+              name: http
+      volumes:
+        - name: web-application-secret
+          secret:
+            secretName: web-application-secret
