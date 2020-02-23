@@ -1,10 +1,10 @@
 # Exercise
 
-* Deploy the Helm chart stable/ghost (https://github.com/helm/charts/tree/master/stable/ghost)
+* Deploy the Helm chart bitnami/ghost (https://hub.helm.sh/charts/bitnami/ghost)
 * Configure it so that it uses the Ingress controller, the Certificate and the MySQL database created before
 * Installation would look like:
 ```
-helm upgrade --install ghost stable/ghost -f values.yaml
+helm upgrade --install ghost bitnami/ghost -f values.yaml
 ```
 
 Bonus:
