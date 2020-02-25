@@ -46,3 +46,4 @@ https://speakerdeck.com/bastianhofmann/dive-in-workshop-kubernetes
 * https://github.com/derailed/k9s
 * https://github.com/ramitsurana/awesome-kubernetes
 * https://github.com/int128/kubelogin
+* https://velero.io/
